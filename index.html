@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body onLoad="myFunction()">
+
+<p id="demo">Date</p>
+<p id="demo1"> Month</p>
+<!--<button onclick="myFunction()">Try it</button>-->
+
+<script>
+function myFunction()
+{
+var d = new Date();
+var da=d.getDate();
+var m = d.getMonth();
+var x = document.getElementById("demo");
+x.innerHTML=da;
+var x1 = document.getElementById("demo1");
+x1.innerHTML=m+1;
+}
+</script>
+
+</body>
+</html>
