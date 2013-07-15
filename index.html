@@ -1,23 +1,47 @@
-<!DOCTYPE html>
-<html>
-<body onLoad="myFunction()">
-
-<p id="demo">Date</p>
-<p id="demo1"> Month</p>
-<!--<button onclick="myFunction()">Try it</button>-->
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML5 Local Storage</title>
+<script type="application/javascript" src="jquery-1.9.1.js"> </script>
 <script>
 function myFunction()
 {
-var d = new Date();
-var da=d.getDate();
-var m = d.getMonth();
-var x = document.getElementById("demo");
-x.innerHTML=da;
-var x1 = document.getElementById("demo1");
-x1.innerHTML=m+1;
+var today = new Date();
+//alert(today);
+var dn=today.getDate();
+var mn=today.getMonth();
+alert(dn);
+mn=mn+1;
+alert(mn);
+var remd=dn+10;
+var remm=mn+1;
+alert(remd);
+alert(remm);
+
+  var datenow = document.getElementById('datenow');
+    var monthnow = document.getElementById('monthnow');
+ // $(edit).blur(function() {
+    localStorage.setItem('remddate', remd);
+	localStorage.setItem('remmonth',remm);
+ // });
+  
+    datenow.innerHTML = localStorage.getItem('remddate'); 
+	 monthnow.innerHTML = localStorage.getItem('remmonth'); 
+  // to reset
+  // localStorage.clear();
+  
+
 }
 </script>
-
+</head>
+<body onload="myFunction()">
+<div class="content">
+  <h1> Test App for Local storage </h1>
+  <section>
+    <p id="datenow"> </p>
+    <p id="monthnow"> </p>
+  </section>
+</div>
 </body>
 </html>
