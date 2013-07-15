@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML5 Local Storage</title>
+<script type="application/javascript" src="jquery-1.9.1.js"> </script>
+<script>
+function myFunction()
+{
+
+  var localdate = document.getElementById('localvaldate');
+  var localmonth = document.getElementById('localvalmonth');
+  
+    localdate.innerHTML = localStorage.getItem('remddate'); 
+	localmonth.innerHTML = localStorage.getItem('remmonth'); 
+  // to reset
+  // localStorage.clear();
+  
+
+}
+</script>
+</head>
+<body onload="myFunction()">
+<div class="content">
+  <h1> Test App for Local storage - Home</h1>
+  <section>
+    <p id="localvaldate"> </p>
+     <p id="localvalmonth"> </p>
+  </section>
+</div>
+</body>
+</html>
